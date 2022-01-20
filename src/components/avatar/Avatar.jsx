@@ -1,7 +1,7 @@
 import styles from "./Avatar.module.scss";
 import classNames from "classnames";
 
-function Avatar({ size, url, verified }) {
+export default function Avatar({ size = "90", url, verified = false }) {
   return (
     <div
       className={classNames(styles.avatar)}
@@ -18,10 +18,3 @@ function Avatar({ size, url, verified }) {
     </div>
   );
 }
-
-export default Avatar;
-
-Avatar.defaultProps = {
-  size: "90",
-  verified: false,
-};

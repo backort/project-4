@@ -30,26 +30,22 @@ export default function Header() {
             />
           </FormControl>
         </Grid>
-        <Grid
-          item
-          md={3}
-          display={"flex"}
-          alignItems={"center"}
-          justifyContent={"space-around"}
-          height={45}
-        >
+        <Grid item md={3} display={"flex"} alignItems={"center"} justifyContent={"flex-end"} height={45}>
           <Link href="/">
             <a className={styles.link}>Home</a>
           </Link>
           <Link href="/activity">
             <a className={styles.link}>Activity</a>
           </Link>
-          <Link href="/">
-            <a>
-              <Button size="small" variant="contained" disableElevation>
-                Explore
-              </Button>
-            </a>
+          <Link href="/explore" passHref>
+            <Button
+              size="small"
+              variant="contained"
+              component="a"
+              disableElevation
+            >
+              Explore
+            </Button>
           </Link>
         </Grid>
       </Grid>

@@ -1,0 +1,22 @@
+@use "../../styles/colors";
+
+.user {
+    display: flex !important;
+
+}
+
+.userData {
+    margin-left: 20px;
+}
+
+.name {
+    font-weight: bold;
+    line-height: 10px;
+    font-size: 1rem;
+}
+
+.info {
+    line-height: 0;
+    font-size: 0.9rem;
+    color: colors.$info_main;
+}

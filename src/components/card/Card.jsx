@@ -14,7 +14,7 @@ import {
 
 export default function CardComponent({
   name,
-  likes,
+  likes = 0,
   mediaUrl,
   user,
   price,

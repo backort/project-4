@@ -6,7 +6,7 @@ import Avatar from "../avatar/Avatar";
 function User({ name, info, avatar, size, verified }) {
   return (
     <Container className={classNames(styles.user)}>
-      <Avatar url={avatar} verified={true} size={size} />
+      <Avatar url={avatar} verified={verified} size={size} />
       <div className={classNames(styles.userData)}>
         <p className={classNames(styles.name)}>{name}</p>
         <p className={classNames(styles.info)}>{info}</p>

@@ -16,11 +16,11 @@ function User({ name, info, avatar, size, verified }) {
 }
 
 User.defaultProps = {
-  name: "",
-  info: "",
-  avatar: "",
+  name: "terlik",
+  info: "123 items",
+  avatar: "/images/avatar.png",
   size: "55",
-  verified: false,
+  verified: true,
 };
 
 export default User;

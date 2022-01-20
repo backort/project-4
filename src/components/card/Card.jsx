@@ -56,7 +56,7 @@ export default function CardComponent({
       </div>
       <CardContent className={classNames(styles.titleContainer)}>
         <div>
-          <Typography className={classNames(styles.card_title)}>{name}</Typography>
+          <Typography className={classNames(styles.title)}>{name}</Typography>
           <Typography className={classNames(styles.price)}>
             {price} {currency}
           </Typography>

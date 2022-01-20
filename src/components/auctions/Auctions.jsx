@@ -1,12 +1,12 @@
 import styles from "./Auctions.module.scss";
 import {
   MenuItem,
-  Select,
   Typography,
-  Container,
   Grid,
   FormControl,
 } from "@mui/material";
+import Select from "@mui/material";
+import Container from "@mui/material";
 import classNames from "classnames";
 import CardComponent from "../card/Card";
 
@@ -26,7 +26,7 @@ export default function Auctions({ cards = [] }) {
       <Container maxWidth="xl">
         <Grid container spacing={2}>
           {cards.map((card, index) => (
-            <Grid key={index} item xs={12} md={3} lg={3}>
+            <Grid key={index} item xs={12} md={3} lg={3} className={classNames(styles.card_title)}>
               <CardComponent
                 name={card.name}
                 user={{

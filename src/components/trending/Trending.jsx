@@ -12,7 +12,7 @@ import CardComponent from "../card/Card";
 
 export default function Trending({ cards = [] }) {
   return (
-    <Container>
+    <Container maxWidth="xl">
       <div className={classNames(styles.header)}>
         <Typography variant="h1">Trending</Typography>
         <FormControl sx={{ m: 1, minWidth: 200 }}>
@@ -23,23 +23,25 @@ export default function Trending({ cards = [] }) {
           </Select>
         </FormControl>
       </div>
-      <Grid container spacing={2}>
-        {cards.map((card, index) => (
-          <Grid key={index} item xs={12} md={3} lg={3}>
-            <CardComponent
-              name={card.name}
-              likes={card.likes}
-              mediaUrl={card.mediaUrl}
-              user={{
-                avatar: card.user.avatar.url,
-                verified: card.user.verified,
-              }}
-              price={card.price}
-              currency={card.currency}
-            />
-          </Grid>
-        ))}
-      </Grid>
+      <Container maxWidth="xl">
+        <Grid container spacing={2}>
+          {cards.map((card, index) => (
+            <Grid key={index} item xs={12} md={3} lg={3}>
+              <CardComponent
+                name={card.name}
+                likes={card.likes}
+                mediaUrl={card.mediaUrl}
+                user={{
+                  avatar: card.user.avatar.url,
+                  verified: card.user.verified,
+                }}
+                price={card.price}
+                currency={card.currency}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </Container>
   );
 }

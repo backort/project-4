@@ -8,13 +8,13 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import Link from "next/link";
-import Logo from "../Logo";
+import Logo from "../logo/Logo";
 
 export default function Header() {
   return (
     <Container className={styles.container} maxWidth="xxl">
       <Grid container gap={2} display="flex" alignItems={"center"}>
-        <Grid item md={3} display="flex" justify="center">
+        <Grid item md={3} display={"flex"} justifyContent={"center"}>
           <Logo type="default"/>
         </Grid>
         <Grid item md={4} display="flex" justify="center">
@@ -30,7 +30,7 @@ export default function Header() {
             />
           </FormControl>
         </Grid>
-        <Grid item md={3} display="flex" justify="center" height={45}>
+        <Grid item md={3} display={"flex"} alignItems={"center"} justifyContent={"space-around"} height={45}>
           <Link href="/">
             <a>Home</a>
           </Link>

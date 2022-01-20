@@ -1,5 +1,6 @@
 @use "../../styles/colors";
 
+
 .container {
     display: flex !important;
     align-items: center;
@@ -10,4 +11,8 @@
 
 .search {
     background: colors.$background_default;
+}
+
+.link {
+    color: #fff;
 }

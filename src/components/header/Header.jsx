@@ -15,7 +15,7 @@ export default function Header() {
     <Container className={styles.container} maxWidth="xxl">
       <Grid container gap={2} display="flex" alignItems={"center"}>
         <Grid item md={3} display={"flex"} justifyContent={"center"}>
-          <Logo type="default"/>
+          <Logo type="default" />
         </Grid>
         <Grid item md={4} display="flex" justify="center">
           <FormControl fullWidth>
@@ -30,12 +30,19 @@ export default function Header() {
             />
           </FormControl>
         </Grid>
-        <Grid item md={3} display={"flex"} alignItems={"center"} justifyContent={"space-around"} height={45}>
+        <Grid
+          item
+          md={3}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"space-around"}
+          height={45}
+        >
           <Link href="/">
-            <a>Home</a>
+            <a className={styles.link}>Home</a>
           </Link>
           <Link href="/activity">
-            <a>Activity</a>
+            <a className={styles.link}>Activity</a>
           </Link>
           <Link href="/">
             <a>

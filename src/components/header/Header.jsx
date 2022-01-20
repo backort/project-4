@@ -8,14 +8,14 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import Link from "next/link";
-import { Menu, MenuItem } from "@mui/material";
+import Logo from "../Logo";
 
 export default function Header() {
   return (
-    <Container className={styles.container} maxWidth="xl">
+    <Container className={styles.container} maxWidth="xxl">
       <Grid container gap={2} display="flex" alignItems={"center"}>
         <Grid item md={3} display="flex" justify="center">
-          <Image alt="logo" src="/images/logo.svg" width={90} height={50} />
+          <Logo type="default"/>
         </Grid>
         <Grid item md={4} display="flex" justify="center">
           <FormControl fullWidth>
@@ -31,27 +31,19 @@ export default function Header() {
           </FormControl>
         </Grid>
         <Grid item md={3} display="flex" justify="center" height={45}>
-          <Menu>
-            <MenuItem>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link href="/activity">
-                <a>Activity</a>
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link href="/">
-                <a>
-                  <Button size="small" variant="contained" disableElevation>
-                    Explore
-                  </Button>
-                </a>
-              </Link>
-            </MenuItem>
-          </Menu>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+          <Link href="/activity">
+            <a>Activity</a>
+          </Link>
+          <Link href="/">
+            <a>
+              <Button size="small" variant="contained" disableElevation>
+                Explore
+              </Button>
+            </a>
+          </Link>
         </Grid>
       </Grid>
     </Container>

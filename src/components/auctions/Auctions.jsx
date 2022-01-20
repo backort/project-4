@@ -26,7 +26,7 @@ export default function Auctions({ cards = [] }) {
       <Container maxWidth="xl">
         <Grid container spacing={2}>
           {cards.map((card, index) => (
-            <Grid key={index} item xs={12} md={3} lg={3} className={classNames(styles.card_title)}>
+            <Grid key={index} item xs={12} md={3} lg={3}>
               <CardComponent
                 name={card.name}
                 user={{

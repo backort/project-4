@@ -7,6 +7,7 @@ export default function About() {
   return (
     <Container maxWidth="sm">
       <User />
+      <Avatar url={'/images/avatar.png'} />
     </Container>
   );
 }

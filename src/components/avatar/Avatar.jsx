@@ -5,11 +5,7 @@ export default function Avatar({ size, url, verified }) {
   return (
     <div
       className={classNames(styles.avatar)}
-      style={
-        size
-          ? { width: size + "px", height: size + "px" }
-          : { width: "90px", height: "90px" }
-      }
+      style={{ width: size + "px", height: size + "px" }}
     >
       <img src={url} className={classNames(styles.image)} alt="avatar" />
       {verified && (
@@ -22,3 +18,8 @@ export default function Avatar({ size, url, verified }) {
     </div>
   );
 }
+
+Avatar.defaultProps = {
+  size: "90",
+  verified: false,
+};

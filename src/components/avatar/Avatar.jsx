@@ -19,9 +19,9 @@ function Avatar({ size, url, verified }) {
   );
 }
 
+export default Avatar;
+
 Avatar.defaultProps = {
   size: "90",
   verified: false,
 };
-
-export default Avatar;

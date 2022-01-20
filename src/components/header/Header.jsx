@@ -7,10 +7,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import Link from "next/link";
 import Logo from "../logo/Logo";
+import classNames from "classnames";
 
 export default function Header() {
   return (
-    <Container className={styles.container} maxWidth="xxl">
+    <Container className={classNames(styles.container)} maxWidth="xxl">
       <Grid container gap={2} display="flex" alignItems={"center"}>
         <Grid item md={3} display={"flex"} justifyContent={"center"}>
           <Logo type="default" />
@@ -19,7 +20,7 @@ export default function Header() {
           <OutlinedInput
             fullWidth
             placeholder="Find items, users and activities"
-            className={styles.search}
+            className={classNames(styles.search)}
             startAdornment={
               <InputAdornment position="start">
                 <SearchIcon style={{ color: "white" }} />
@@ -36,10 +37,10 @@ export default function Header() {
           height={45}
         >
           <Link href="/">
-            <a className={styles.link}>Home</a>
+            <a className={classNames(styles.link)}>Home</a>
           </Link>
           <Link href="/activity">
-            <a className={styles.link}>Activity</a>
+            <a className={classNames(styles.link)}>Activity</a>
           </Link>
           <Link href="/explore" passHref>
             <Button

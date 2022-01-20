@@ -1,8 +1,6 @@
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import styles from "./Header.module.scss";
-import Image from "next/image";
-import FormControl from "@mui/material/FormControl";
 import InputAdornment from "@mui/material/InputAdornment";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import SearchIcon from "@mui/icons-material/Search";
@@ -18,19 +16,25 @@ export default function Header() {
           <Logo type="default" />
         </Grid>
         <Grid item md={4} display="flex" justify="center">
-          <FormControl fullWidth>
-            <OutlinedInput
-              placeholder="Find items, users and activities"
-              className={styles.search}
-              startAdornment={
-                <InputAdornment position="start">
-                  <SearchIcon style={{ color: "white" }} />
-                </InputAdornment>
-              }
-            />
-          </FormControl>
+          <OutlinedInput
+            fullWidth
+            placeholder="Find items, users and activities"
+            className={styles.search}
+            startAdornment={
+              <InputAdornment position="start">
+                <SearchIcon style={{ color: "white" }} />
+              </InputAdornment>
+            }
+          />
         </Grid>
-        <Grid item md={3} display={"flex"} alignItems={"center"} justifyContent={"flex-end"} height={45}>
+        <Grid
+          item
+          md={3}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"flex-end"}
+          height={45}
+        >
           <Link href="/">
             <a className={styles.link}>Home</a>
           </Link>

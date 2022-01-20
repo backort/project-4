@@ -3,17 +3,12 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Link from "../../src/components/link/Link";
+import Avatar from "../../src/components/avatar/Avatar";
 
 export default function About() {
   return (
     <Container maxWidth="sm">
-      <Grid container justifyContent="center">
-        <Grid item>
-          <Button variant="contained" component={Link} noLinkStyle href="/">
-            🏠 Home
-          </Button>
-        </Grid>
-      </Grid>
+      <Avatar url="/images/avatar.png" verified={true} size="90" />
     </Container>
   );
 }

@@ -1,0 +1,30 @@
+@use "../../styles/colors";
+
+.media {
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+  font-weight: bold !important;
+  font-size: 1.2rem !important;
+}
+
+.price {
+  color: colors.$secondary_main;
+  font-weight: bold !important;
+  font-size: 1rem !important;
+}
+
+.likes {
+  border-color: colors.$secondary_main !important;
+  color: colors.$secondary_main !important;
+  background: rgba(colors.$secondary_main, 0.1) !important;
+  font-weight: bold !important;
+}

@@ -1,14 +1,18 @@
 @use "../../styles/colors";
 
+.backgroundTimeLeft {
+  background: rgba(colors.$secondary_main, 0.1) !important;
+}
+
 .media {
-  padding: 10px 20px;
-  border-radius: 30px;
+  width: 100%;
+  height: 100%;
 }
 
 .titleContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
@@ -27,4 +31,47 @@
   color: colors.$secondary_main !important;
   background: rgba(colors.$secondary_main, 0.1) !important;
   font-weight: bold !important;
+}
+
+.liveContainer {
+  border-radius: 30px;
+  width: 230px;
+  margin: 0 auto;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.countdownContainer {
+  background: colors.$secondary_main !important;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  background: colors.$secondary_main !important;
+  position: absolute;
+  padding: 5px;
+  border-radius: 10px;
+  color: black;
+  top: 15px;
+  left: 20px;
+}
+
+.badge p {
+  margin: 0 0 0 1px !important;
+  font-weight: bold !important;
+  font-size: 0.8rem;
+}
+
+.countdown {
+  position: absolute;
 }

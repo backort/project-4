@@ -37,6 +37,7 @@ export default function Trending({ cards = [] }) {
                 }}
                 price={card.price}
                 currency={card.currency}
+                timeLeft={card.timeLeft}
               />
             </Grid>
           ))}

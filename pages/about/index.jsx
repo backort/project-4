@@ -9,7 +9,7 @@ import Auctions from "../../src/components/auctions/Auctions";
 export default function About() {
   const cards = [
     {
-      name: "Ivy",
+      name: "Clock",
       user: {
         avatar: {
           url: "images/avatar.png",
@@ -19,9 +19,10 @@ export default function About() {
       mediaUrl: "images/nft.jpg",
       price: 1,
       currency: "ETH",
+      timeLeft: 30000
     },
     {
-      name: "Judie",
+      name: "DOGE",
       user: {
         avatar: {
           url: "images/avatar.png",
@@ -31,9 +32,10 @@ export default function About() {
       mediaUrl: "images/nft.jpg",
       price: 2.3,
       currency: "ETH",
+      timeLeft: 30000
     },
     {
-      name: "Juniper",
+      name: "BTC",
       user: {
         avatar: {
           url: "images/avatar.png",
@@ -43,9 +45,10 @@ export default function About() {
       mediaUrl: "images/nft.jpg",
       price: 5,
       currency: "ETH",
+      timeLeft: 30000
     },
     {
-      name: "Maple",
+      name: "Litecoin",
       user: {
         avatar: {
           url: "images/avatar.png",
@@ -55,7 +58,7 @@ export default function About() {
       mediaUrl: "images/nft.jpg",
       price: 10,
       currency: "ETH",
-      timeLeft: 3000
+      timeLeft: 30000
     },
   ];
   return <Auctions cards={cards} />;

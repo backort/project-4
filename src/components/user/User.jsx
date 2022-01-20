@@ -3,7 +3,7 @@ import styles from "./User.module.scss";
 import classNames from "classnames";
 import Avatar from "../avatar/Avatar";
 
-export default function User({ name, info, avatar, size, verified }) {
+function User({ name, info, avatar, size, verified }) {
   return (
     <Container className={classNames(styles.user)}>
       <Avatar url={avatar} verified={true} size={size} />
@@ -22,3 +22,5 @@ User.defaultProps = {
   size: "55",
   verified: false,
 };
+
+export default User;

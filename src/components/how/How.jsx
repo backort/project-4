@@ -32,6 +32,7 @@ export default function How({ description, title, items = [], link }) {
         <Grid item className={classNames(styles.steps)}>
           {items.map((item, index) => (
             <Step
+              key={index}
               title={item.title}
               description={item.description}
               number={index + 1}

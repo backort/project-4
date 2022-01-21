@@ -11,7 +11,7 @@ import {
 import CollectorColumn from "./CollectorColumn";
 import array from "lodash/array";
 
-export default function TopCollectors({ items }) {
+export default function TopCollectors({ collectors }) {
   return (
     <Container maxWidth="xl">
       <Grid className={classNames(styles.header)} container>
@@ -36,8 +36,8 @@ export default function TopCollectors({ items }) {
         </Grid>
       </Grid>
       <Grid container gap={2}>
-        {array.chunk(items, 3).map((item, index) => (
-          <CollectorColumn key={index} items={item} />
+        {array.chunk(collectors, 3).map((collector, index) => (
+          <CollectorColumn key={index} items={collector} />
         ))}
       </Grid>
     </Container>

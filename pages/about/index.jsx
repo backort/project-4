@@ -101,5 +101,5 @@ export default function About() {
     },
   ];
 
-  return <TopCollectors items={collectors} />;
+  return <TopCollectors collectors={collectors} />;
 }

@@ -1,4 +1,4 @@
-import styles from "./Features.module.scss";
+import styles from "./Featured.module.scss";
 import classNames from "classnames";
 import { Container, ImageList, ImageListItem } from "@mui/material";
 import { useRouter } from "next/router";

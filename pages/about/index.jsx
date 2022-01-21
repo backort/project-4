@@ -9,138 +9,33 @@ import Footer from "../../src/components/footer/Footer";
 import Step from "../../src/components/how/Step";
 import How from "../../src/components/how/How";
 import Featured from "../../src/components/featured/Featured";
+import Collector from "../../src/components/collector/Collector";
+import CollectorsColumn from "../../src/components/collector/CollectorsColumn";
 
 export default function About() {
-  const cards = [
+  let collectors = [
     {
-      name: "Ivy",
-      user: {
-        avatar: {
-          url: "images/avatar.png",
-        },
-        verified: true,
-      },
-      mediaUrl: "images/nft.jpg",
-      price: 1,
-      currency: "ETH",
-      timeLeft: 3000,
+      name: "testname",
+      nftsCount: 123,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 1,
     },
     {
-      name: "Judie",
-      user: {
-        avatar: {
-          url: "images/avatar.png",
-        },
-        verified: true,
-      },
-      mediaUrl: "images/nft.jpg",
-      price: 2.3,
-      currency: "ETH",
-      timeLeft: 3000,
+      name: "asdef1",
+      nftsCount: 99,
+      avatar: "/images/avatar.png",
+      verified: false,
+      id: 2,
     },
     {
-      name: "Juniper",
-      user: {
-        avatar: {
-          url: "images/avatar.png",
-        },
-        verified: true,
-      },
-      mediaUrl: "images/nft.jpg",
-      price: 5,
-      currency: "ETH",
-      timeLeft: 3000,
-    },
-    {
-      name: "Maple",
-      user: {
-        avatar: {
-          url: "images/avatar.png",
-        },
-        verified: true,
-      },
-      mediaUrl: "images/nft.jpg",
-      price: 10,
-      currency: "ETH",
-      timeLeft: 3000,
+      name: "terlika1",
+      nftsCount: 6553,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 3,
     },
   ];
 
-  const hows = {
-    description:
-      "Discover, collect, and sell extraordinary NFTs on the worlds first & largets NFT marketplace. There are thre things you'll need in place to open your account and start buying or selling NFTs on BUM.",
-    title: "How it works",
-    items: [
-      {
-        title: "NFT",
-        description: "first one",
-      },
-      {
-        title: "NFT",
-        description: "second one",
-      },
-      {
-        title: "NFT",
-        description: "third one",
-      },
-    ],
-    link: "String",
-  };
-  let items = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=500&h=500",
-      title: "Breakfast",
-      rows: 2,
-      cols: 3,
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=500&h=500",
-      title: "Burger",
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1522770179533-24471fcdba45?w=500&h=500",
-      title: "Camera",
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?w=500&h=500",
-      title: "Coffee",
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1533827432537-70133748f5c8?w=500&h=500",
-      title: "Hats",
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=500&h=500",
-      title: "Honey",
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6?w=500&h=500",
-      title: "Basketball",
-      href: "/about",
-    },
-  ]
-  return (
-    <React.Fragment>
-      <How
-        title={hows.title}
-        description={hows.description}
-        items={hows.items}
-        link={hows.link}
-      />
-      <Featured items={items}/>
-    </React.Fragment>
-  );
+  return <CollectorsColumn items={collectors} />;
 }

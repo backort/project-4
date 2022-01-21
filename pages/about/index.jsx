@@ -11,7 +11,7 @@ import How from "../../src/components/how/How";
 import Featured from "../../src/components/featured/Featured";
 import Collector from "../../src/components/collectors/Collector";
 import CollectorsColumn from "../../src/components/collectors/CollectorColumn";
-import TopCollectors from "../../src/components/topcollectors/TopCollectors";
+import TopCollectors from "../../src/components/collectors/TopCollectors";
 
 export default function About() {
   let collectors = [

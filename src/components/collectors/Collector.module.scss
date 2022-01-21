@@ -9,9 +9,10 @@
     display: flex;
     align-items: center;
     background: colors.$background_paper;
+    width: 340px;
 }
 
 .number {
-    padding: 40px;
+    padding: 20px 30px;
     background: rgba(colors.$primary_main, 10%);
 }

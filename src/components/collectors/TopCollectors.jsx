@@ -8,7 +8,7 @@ import {
   Select,
   Typography,
 } from "@mui/material";
-import CollectorColumn from "../collectors/CollectorColumn";
+import CollectorColumn from "./CollectorColumn";
 import array from "lodash/array";
 
 export default function TopCollectors({ items }) {

@@ -6,7 +6,7 @@ import Card from "../../src/components/card/Card";
 import Trending from "../../src/components/trending/Trending";
 import Auctions from "../../src/components/auctions/Auctions";
 import Footer from "../../src/components/footer/Footer";
-import Step from "../../src/components/step/Step";
+import Step from "../../src/components/how/Step";
 import How from "../../src/components/how/How";
 
 export default function About() {

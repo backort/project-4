@@ -1,7 +1,7 @@
 import { Button, Grid, Typography } from "@mui/material";
 import styles from "./How.module.scss";
 import classNames from "classnames";
-import Step from "../step/Step";
+import Step from "./Step";
 import Link from "next/link";
 
 export default function How({ description, title, items = [], link }) {

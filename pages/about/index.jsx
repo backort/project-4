@@ -9,8 +9,8 @@ import Footer from "../../src/components/footer/Footer";
 import Step from "../../src/components/how/Step";
 import How from "../../src/components/how/How";
 import Featured from "../../src/components/featured/Featured";
-import Collector from "../../src/components/collector/Collector";
-import CollectorsColumn from "../../src/components/collector/CollectorsColumn";
+import Collector from "../../src/components/collectors/Collector";
+import CollectorsColumn from "../../src/components/collectors/CollectorColumn";
 
 export default function About() {
   let collectors = [

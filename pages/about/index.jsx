@@ -11,6 +11,7 @@ import How from "../../src/components/how/How";
 import Featured from "../../src/components/featured/Featured";
 import Collector from "../../src/components/collectors/Collector";
 import CollectorsColumn from "../../src/components/collectors/CollectorColumn";
+import TopCollectors from "../../src/components/topcollectors/TopCollectors";
 
 export default function About() {
   let collectors = [
@@ -35,7 +36,70 @@ export default function About() {
       verified: true,
       id: 3,
     },
+    {
+      name: "terlika15",
+      nftsCount: 555,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 4,
+    },
+    {
+      name: "terlika1",
+      nftsCount: 6553,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 5,
+    },
+    {
+      name: "terlika1",
+      nftsCount: 6553,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 6,
+    },
+    {
+      name: "terlika1",
+      nftsCount: 6553,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 7,
+    },
+    {
+      name: "terlika1",
+      nftsCount: 6553,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 8,
+    },
+    {
+      name: "terlika1",
+      nftsCount: 6553,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 9,
+    },
+    {
+      name: "terlika1",
+      nftsCount: 6553,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 10,
+    },
+    {
+      name: "terlika1",
+      nftsCount: 6553,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 11,
+    },
+    {
+      name: "terlika1",
+      nftsCount: 6553,
+      avatar: "/images/avatar.png",
+      verified: true,
+      id: 12,
+    },
   ];
 
-  return <CollectorsColumn items={collectors} />;
+  return <TopCollectors items={collectors} />;
 }

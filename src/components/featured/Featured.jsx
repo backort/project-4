@@ -3,15 +3,6 @@ import classNames from "classnames";
 import { Container, ImageList, ImageListItem } from "@mui/material";
 import { useRouter } from "next/router";
 
-function srcset(image, size, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  };
-}
-
 export default function Featured({ items = [] }) {
   const router = useRouter();
   return (
@@ -33,7 +24,7 @@ export default function Featured({ items = [] }) {
                 e.preventDefault();
                 router.push(item.href);
               }}
-              {...srcset(item.image, 121, item.rows, item.cols)}
+              src={item.image}
               alt={item.title}
               loading="lazy"
               className={classNames(styles.image)}

@@ -22,7 +22,7 @@ export default function Footer() {
           md={4}
           display={"flex"}
           alignItems={"center"}
-          justifyContent={"flex-end"}
+          justifyContent={"center"}
         >
           <Typography className={classNames(styles.footerText)} paragraph>
             Boom. All Rights Reserved. 2021

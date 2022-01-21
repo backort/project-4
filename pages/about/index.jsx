@@ -5,6 +5,7 @@ import Avatar from "../../src/components/avatar/Avatar";
 import Card from "../../src/components/card/Card";
 import Trending from "../../src/components/trending/Trending";
 import Auctions from "../../src/components/auctions/Auctions";
+import Footer from "../../src/components/footer/Footer";
 
 export default function About() {
   const cards = [
@@ -61,5 +62,5 @@ export default function About() {
       timeLeft: 3000
     },
   ];
-  return <Trending cards={cards} />;
+  return <Footer />;
 }

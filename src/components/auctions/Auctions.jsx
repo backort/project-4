@@ -5,7 +5,7 @@ import {
   Grid,
   FormControl,
   Select,
-  Container
+  Container,
 } from "@mui/material";
 import classNames from "classnames";
 import CardComponent from "../card/Card";
@@ -13,16 +13,20 @@ import CardComponent from "../card/Card";
 export default function Auctions({ cards = [] }) {
   return (
     <Container maxWidth="xl">
-      <div className={classNames(styles.header)}>
-        <Typography variant="h1">&#128293; Live Auctions</Typography>
-        <FormControl sx={{ m: 1, minWidth: 200 }}>
-          <Select displayEmpty>
-            <MenuItem>This week</MenuItem>
-            <MenuItem>This month</MenuItem>
-            <MenuItem>This year</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
+      <Grid className={classNames(styles.header)} container>
+        <Grid item xs={12} sm={12} md={8} lg={6}>
+          <Typography variant="h1">&#128293; Live Auctions</Typography>
+        </Grid>
+        <Grid item xs={12} sm={12} md={4} lg={6} style={{justifyContent: 'flex-end', display: 'flex'}}>
+          <FormControl sx={{ m: 1, minWidth: 200 }}>
+            <Select displayEmpty>
+              <MenuItem>This week</MenuItem>
+              <MenuItem>This month</MenuItem>
+              <MenuItem>This year</MenuItem>
+            </Select>
+          </FormControl>
+        </Grid>
+      </Grid>
       <Container maxWidth="xl">
         <Grid container spacing={2}>
           {cards.map((card, index) => (

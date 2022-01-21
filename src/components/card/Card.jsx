@@ -31,6 +31,7 @@ export default function CardComponent({
           ? classNames(styles.backgroundTimeLeft)
           : classNames(styles.card)
       }
+      style={{padding: '0 10px'}}
     >
       <CardHeader
         avatar={<Avatar url={user.avatar} verified={user.verified} size={55} />}

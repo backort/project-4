@@ -61,5 +61,5 @@ export default function About() {
       timeLeft: 3000
     },
   ];
-  return <Auctions cards={cards} />;
+  return <Trending cards={cards} />;
 }

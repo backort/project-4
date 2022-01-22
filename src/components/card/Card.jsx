@@ -26,12 +26,8 @@ export default function CardComponent({
   return (
     <Card
       sx={{ maxWidth: 345 }}
-      className={
-        timeLeft
-          ? classNames(styles.backgroundTimeLeft)
-          : classNames(styles.card)
-      }
-      style={{padding: '0 10px'}}
+      className={timeLeft && classNames(styles.backgroundTimeLeft)}
+      style={{ padding: "0 10px" }}
     >
       <CardHeader
         avatar={<Avatar url={user.avatar} verified={user.verified} size={55} />}
@@ -51,7 +47,7 @@ export default function CardComponent({
         />
         {timeLeft && (
           <div className={classNames(styles.countdownContainer)}>
-            <Countdown date={Date.now() + 5000} />
+            <Countdown date={timeLeft} />
           </div>
         )}
       </div>

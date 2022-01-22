@@ -34,12 +34,13 @@ export default function Trending({ cards = [] }) {
               <CardComponent
                 name={card.name}
                 user={{
-                  avatar: card.user.avatar.url,
-                  verified: card.user.verified,
+                  avatar: card.owner.avatar.url,
+                  verified: card.owner.verified,
                 }}
-                mediaUrl={card.mediaUrl}
+                mediaUrl={card.source.url}
                 price={card.price}
                 currency={card.currency}
+                likes={card.likes}
               />
             </Grid>
           ))}

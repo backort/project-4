@@ -11,14 +11,14 @@ export default function How({ description, title, items = [], link }) {
         <div className={classNames(styles.textContainer)}>
           <Grid item>
             <Typography variant="h2" className={classNames(styles.title)}>
-              {title}
+              HOW IT WORKS
             </Typography>
             <Typography paragraph className={classNames(styles.description)}>
-              {description}
+             Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are three thing you'll need in place to open your account and start buying or selling NFTs on BUM.
             </Typography>
           </Grid>
           <Grid item>
-            <Link href={link}>
+            <Link href="/">
               <Button
                 className={classNames(styles.btn)}
                 component="a"

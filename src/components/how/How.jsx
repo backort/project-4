@@ -14,7 +14,10 @@ export default function How({ description, title, items = [], link }) {
               HOW IT WORKS
             </Typography>
             <Typography paragraph className={classNames(styles.description)}>
-             Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are three thing you'll need in place to open your account and start buying or selling NFTs on BUM.
+              Discover, collect, and sell extraordinary NFTs on the world's
+              first & largest NFT marketplace. There are three thing you'll need
+              in place to open your account and start buying or selling NFTs on
+              BUM.
             </Typography>
           </Grid>
           <Grid item>

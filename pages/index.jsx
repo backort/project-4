@@ -28,7 +28,7 @@ export default function Index() {
       <div className="app">
         <Featured items={featuredCards} />
         <Trending cards={trendingCards} />
-        <TopCollectors />
+        <TopCollectors collectors={users} />
         <How />
         <Auctions cards={nfts} />
       </div>

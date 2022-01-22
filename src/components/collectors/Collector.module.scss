@@ -1,18 +1,17 @@
 @use "../../styles/colors.scss";
 
 .light {
-    background: rgba(colors.$primary_main, 10%) !important;
+  background: rgba(colors.$primary_main, 10%) !important;
 }
 
-
 .collector {
-    display: flex;
-    align-items: center;
-    background: colors.$background_paper;
-    width: 340px;
+  display: flex;
+  align-items: center;
+  background: colors.$background_paper;
+  width: 400px;
 }
 
 .number {
-    padding: 20px 30px;
-    background: rgba(colors.$primary_main, 10%);
+  padding: 20px 30px;
+  background: rgba(colors.$primary_main, 10%);
 }

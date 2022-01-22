@@ -11,7 +11,6 @@ import classNames from "classnames";
 import CardComponent from "../card/Card";
 
 export default function Auctions({ cards = [] }) {
-  console.log(cards);
   return (
     <Container maxWidth="xl">
       <Grid className={classNames(styles.header)} container>

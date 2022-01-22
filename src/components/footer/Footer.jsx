@@ -36,7 +36,7 @@ export default function Footer() {
           justifyContent={"flex-end"}
           height={45}
         >
-          <Link href="/">
+          <Link href="/policy">
             <a className={classNames(styles.link)}>Privacy Policy</a>
           </Link>
           <Link href="/activity">

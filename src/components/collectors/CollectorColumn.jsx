@@ -3,7 +3,6 @@ import classNames from "classnames";
 import Collector from "./Collector";
 
 export default function CollectorColumn({ items }) {
-  console.log(items);
   return (
     <div className={classNames(styles.container)}>
       {items.map((item, index) => (

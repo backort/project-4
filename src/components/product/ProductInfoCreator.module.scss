@@ -1,17 +1,25 @@
 @use '../../styles/colors';
 
 .product-info-creator {
-    width: 100%;
+    width: 400px;
+    border-radius: 20px;
     font-size: 1rem;
-    background-color: colors.$background_paper;
-    color: colors.$text_primary;
+    background-color: rgba(colors.$primary_main, 20%);
+    overflow: hidden;
 }
 
 .title {
     font-size: 1rem;
+    padding: 10px 46px;
     color: colors.$text_primary;
+    text-transform: uppercase;
+    margin: 0 !important;
+    font-weight: bold;
+    
 }
 
 .user-container {
+    padding: 10px;
     width: 100%;
+    background-color: colors.$background_paper;
 }

@@ -15,7 +15,7 @@ export default function User({
       <Avatar url={avatar} verified={verified} size={size} />
       <div className={classNames(styles.userData)}>
         <p className={classNames(styles.name)}>{name}</p>
-        <p className={classNames(styles.info)}>{info} Items</p>
+        {info ? <p className={classNames(styles.info)}>{info} Items</p> : null}
       </div>
     </Container>
   );

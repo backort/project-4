@@ -1,13 +1,15 @@
-@use '../../styles/colors.scss';
+@use '../../styles/colors';
 
 .product-info-creator {
     width: 100%;
     font-size: 1rem;
-    color: colors.$primary_main;
+    background-color: colors.$background_paper;
+    color: colors.$text_primary;
 }
 
 .title {
     font-size: 1rem;
+    color: colors.$text_primary;
 }
 
 .user-container {

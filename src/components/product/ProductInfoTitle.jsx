@@ -1,6 +1,6 @@
 import styles from "./ProductInfoTitle.module.scss";
 import classNames from "classnames";
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 export default function ProductInfoTitle({ text }) {
   return (

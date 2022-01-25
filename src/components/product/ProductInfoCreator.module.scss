@@ -1,6 +1,9 @@
+@use '../../styles/colors.scss';
+
 .product-info-creator {
     width: 100%;
     font-size: 1rem;
+    color: colors.$primary_main;
 }
 
 .title {

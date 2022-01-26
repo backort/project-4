@@ -7,7 +7,7 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
   if (!timeEnd) {
     return (
       <div
-        className={classNames(styles[`product-info-timer`], {
+        className={classNames(styles["product-info-timer"], {
           [styles.active]: !timeEnd,
         })}
       >

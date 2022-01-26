@@ -1,32 +1,30 @@
 @use "../../styles/colors";
 
 .product-info-timer {
-    width: 250px;
-    border-radius: 10px;
-    font-size: 1rem;
-    background-color: colors.$secondary_main;
-    overflow: hidden;
-    text-align: center;
-    color: black;
+  width: 250px;
+  border-radius: 10px;
+  font-size: 1rem;
+  overflow: hidden;
+  text-align: center;
+  color: black;
 }
 
 .title {
-    font-size: 1rem;
-    padding: 10px;
-    text-transform: uppercase;
-    margin: 0 !important;
-    font-weight: bold;
-    background-color: colors.$success_main;;
+  font-size: 1rem;
+  padding: 10px;
+  text-transform: uppercase;
+  margin: 0 !important;
+  font-weight: bold;
+  background-color: colors.$success_main;
 }
 
 .timer {
-    padding: 10px;
-    width: 100%;
-    background-color: colors.$secondary_main;
-    font-size: 2rem;
-    font-weight: bold;
+  padding: 10px;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .active {
-    background-color: colors.$secondary_main;
+  background-color: colors.$secondary_main;
 }

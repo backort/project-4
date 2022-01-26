@@ -18,5 +18,5 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
       </div>
     );
   }
-  return <div className={classNames(styles["product-info-timer"])}></div>;
+  return <div></div>;
 }

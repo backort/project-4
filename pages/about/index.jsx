@@ -13,6 +13,7 @@ import Collector from "../../src/components/collectors/Collector";
 import CollectorsColumn from "../../src/components/collectors/CollectorColumn";
 import TopCollectors from "../../src/components/collectors/TopCollectors";
 import ProductInfoCreator from "../../src/components/product/ProductInfoCreator";
+import ProductInfoTimer from "../../src/components/product/ProductInfoTimer";
 
 export default function About() {
   let collectors = [
@@ -103,10 +104,6 @@ export default function About() {
   ];
 
   return (
-    <ProductInfoCreator
-      name="Terlik"
-      avatar="/images/avatar.png"
-      verified={true}
-    />
+    <ProductInfoTimer  />
   );
 }

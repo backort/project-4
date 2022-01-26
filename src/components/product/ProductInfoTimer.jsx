@@ -4,7 +4,7 @@ import Countdown from "react-countdown";
 import React from "react";
 
 export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
-  if (!timeEnd) {
+  if (timeEnd) {
     return (
       <div
         className={classNames(styles[`product-info-timer`], {

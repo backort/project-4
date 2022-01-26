@@ -1,10 +1,10 @@
 import styles from "./ProductInfoTimer.module.scss";
 import classNames from "classnames";
 import Countdown from "react-countdown";
+import React from "react";
 
 export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
-  if (timeEnd === null) return <div></div>;
-  else
+  if (timeEnd) {
     return (
       <div className={classNames(styles["product-info-timer"])}>
         <p className={classNames(styles.title)}>Ends in</p>
@@ -13,4 +13,6 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
         </div>
       </div>
     );
+  }
+  return <React.Fragment></React.Fragment>;
 }

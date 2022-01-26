@@ -6,7 +6,11 @@ import React from "react";
 export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
   if (!timeEnd) {
     return (
-      <div className={classNames(styles["product-info-timer"])}>
+      <div
+        className={classNames(styles[`product-info-timer`], {
+          [styles.active]: !timeEnd,
+        })}
+      >
         <p className={classNames(styles.title)}>Ends in</p>
         <div className={classNames(styles.timer)}>
           <Countdown date={onTimeEnd} />

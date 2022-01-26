@@ -14,5 +14,5 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
       </div>
     );
   }
-  return <React.Fragment></React.Fragment>;
+  return <div className={classNames(styles["product-info-timer"])}></div>;
 }

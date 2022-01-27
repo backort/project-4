@@ -4,19 +4,24 @@ import Countdown from "react-countdown";
 import React from "react";
 
 export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
-  if (!timeEnd) {
+  if (timeEnd === null && !timeEnd) {
     return (
-      <div
-        className={classNames(styles["product-info-timer"], {
-          [styles.active]: !timeEnd,
-        })}
-      >
+      <div className={classNames(styles["product-info-timer"])}>
         <p className={classNames(styles.title)}>Ends in</p>
-        <div className={classNames(styles.timer)}>
-          <Countdown date={onTimeEnd} />
-        </div>
+        <div className={classNames(styles.timer)}></div>
       </div>
     );
   }
-  return <div className={classNames(styles["product-info-timer"])}></div>;
+  return (
+    <div
+      className={classNames(styles["product-info-timer"], {
+        [styles.active]: timeEnd,
+      })}
+    >
+      <p className={classNames(styles.title)}>Ends in</p>
+      <div className={classNames(styles.timer)}>
+        <Countdown date={onTimeEnd} />
+      </div>
+    </div>
+  );
 }

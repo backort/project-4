@@ -17,12 +17,14 @@ export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
           [styles.active]: timeEnd,
         })}
       >
-        <div className={classNames(styles.timer), {
-          [styles.active]: timeEnd,
-        }}>
-          <p className={classNames(styles.title), {
-          [styles.active]: timeEnd,
-        }}>Ends in</p>
+        <div className={classNames(styles.timer, { [styles.active]: timeEnd })}>
+          <p
+            className={classNames(styles.title, {
+              [styles.active]: timeEnd,
+            })}
+          >
+            Ends in
+          </p>
           <Countdown date={onTimeEnd} />
         </div>
       </div>

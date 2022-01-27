@@ -16,7 +16,7 @@
   text-transform: uppercase;
   margin: 0 !important;
   font-weight: bold;
-  background-color: colors.$success_main;
+  background-color: colors.$secondary_main;
 }
 
 .timer {
@@ -27,5 +27,5 @@
 }
 
 .active {
-  background-color: green;
+  background-color: colors.$success_main;
 }

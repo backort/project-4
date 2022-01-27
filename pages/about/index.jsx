@@ -104,6 +104,6 @@ export default function About() {
   ];
 
   return (
-    <ProductInfoTimer  />
+    <ProductInfoTimer onTimeEnd={1000} />
   );
 }

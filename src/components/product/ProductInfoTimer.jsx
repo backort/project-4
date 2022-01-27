@@ -6,13 +6,19 @@ import React from "react";
 export default function ProductInfoTimer({ timeEnd, onTimeEnd }) {
   if (!timeEnd) {
     return (
-      <div className={classNames(styles["product-info-timer"])}>
-        <div className={classNames(styles.timer)}></div>
+      <div
+        className={classNames(styles["product-info-timer"], {
+          [styles.active]: timeEnd,
+        })}
+      >
+        <div
+          className={classNames(styles.timer, { [styles.active]: timeEnd })}
+        ></div>
       </div>
     );
   } else {
     return (
-      <div
+      <div 
         className={classNames(styles["product-info-timer"], {
           [styles.active]: timeEnd,
         })}

@@ -34,7 +34,7 @@ export default function ProductInfo({
           <ProductInfoTimer />
         </Grid>
       </Grid>
-      {isLive !== null && <ProductInfoStatus />}
+      {isLive && <ProductInfoStatus />}
     </div>
   );
 }

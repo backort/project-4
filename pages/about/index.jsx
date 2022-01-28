@@ -15,6 +15,7 @@ import TopCollectors from "../../src/components/collectors/TopCollectors";
 import ProductInfoCreator from "../../src/components/product/ProductInfoCreator";
 import ProductInfoTimer from "../../src/components/product/ProductInfoTimer";
 import ProductInfo from "../../src/components/product/ProductInfo";
+import ProductTabs from "../../src/components/product/ProductTabs";
 
 export default function About() {
   let info = {
@@ -28,5 +29,5 @@ export default function About() {
     isLive: false,
   };
 
-  return <ProductInfo />;
+  return <ProductTabs />;
 }

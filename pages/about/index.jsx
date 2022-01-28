@@ -14,96 +14,19 @@ import CollectorsColumn from "../../src/components/collectors/CollectorColumn";
 import TopCollectors from "../../src/components/collectors/TopCollectors";
 import ProductInfoCreator from "../../src/components/product/ProductInfoCreator";
 import ProductInfoTimer from "../../src/components/product/ProductInfoTimer";
+import ProductInfo from "../../src/components/product/ProductInfo";
 
 export default function About() {
-  let collectors = [
-    {
-      name: "testname",
-      nftsCount: 123,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 1,
-    },
-    {
-      name: "asdef1",
-      nftsCount: 99,
-      avatar: "/images/avatar.png",
-      verified: false,
-      id: 2,
-    },
-    {
-      name: "terlika1",
-      nftsCount: 6553,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 3,
-    },
-    {
-      name: "terlika15",
-      nftsCount: 555,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 4,
-    },
-    {
-      name: "terlika1",
-      nftsCount: 6553,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 5,
-    },
-    {
-      name: "terlika1",
-      nftsCount: 6553,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 6,
-    },
-    {
-      name: "terlika1",
-      nftsCount: 6553,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 7,
-    },
-    {
-      name: "terlika1",
-      nftsCount: 6553,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 8,
-    },
-    {
-      name: "terlika1",
-      nftsCount: 6553,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 9,
-    },
-    {
-      name: "terlika1",
-      nftsCount: 6553,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 10,
-    },
-    {
-      name: "terlika1",
-      nftsCount: 6553,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 11,
-    },
-    {
-      name: "terlika1",
-      nftsCount: 6553,
-      avatar: "/images/avatar.png",
-      verified: true,
-      id: 12,
-    },
-  ];
+  let info = {
+    title: "hey",
+    creator: "terlik",
+    price: 123,
+    currency: "ETH",
+    likes: 63642,
+    onTimeEnd: null,
+    timeEnd: null,
+    isLive: false,
+  };
 
-  return (
-    <ProductInfoTimer onTimeEnd={1000} timeEnd={true} />
-  );
+  return <ProductInfo />;
 }

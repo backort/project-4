@@ -26,7 +26,7 @@ export default function ProductTabs({ text, bids }) {
       <TabPanel value="2">
         <Table>
           <TableBody>
-            {bids.map((bid, i) => (
+            {bids.map((i, bid) => (
               <TableRow
                 className={classNames(styles[`table-row-${i}`])}
                 key={i}

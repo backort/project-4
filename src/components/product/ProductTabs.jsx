@@ -40,7 +40,7 @@ export default function ProductTabs({ text, bids }) {
                 key={i}
                 className={classNames(`table-row-${i}`)}
                 style={{
-                  backgroundColor: i % 2 === 1 ? "#4e24f2" : "",
+                  backgroundColor: i % 2 === 1 && "#4e24f2",
                 }}
               >
                 <TableCell component="th" scope="row">

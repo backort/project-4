@@ -11,6 +11,7 @@ import Table from "@mui/material/Table";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import TableBody from "@mui/material/TableBody";
+import { Tabs } from "@mui/material";
 
 export default function ProductTabs({ text, bids }) {
   const [value, setValue] = useState("1");
@@ -19,7 +20,7 @@ export default function ProductTabs({ text, bids }) {
   };
   return (
     <TabContext value={value} className={classNames(styles["product-tabs"])}>
-      <TabList onChange={handleChange}>
+      <Tabs onChange={handleChange}>
         <Tab
           label="Details"
           value="1"
@@ -30,7 +31,7 @@ export default function ProductTabs({ text, bids }) {
           value="2"
           className={classNames(styles["tab-bids"])}
         />
-      </TabList>
+      </Tabs>
       <TabPanel value="1">{text}</TabPanel>
       <TabPanel value="2">
         <Table>

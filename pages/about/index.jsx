@@ -29,5 +29,32 @@ export default function About() {
     isLive: false,
   };
 
-  return <ProductTabs />;
+  let bids = [
+    {
+      name: "tirlik",
+      avatar: "/images/avatar.png",
+      amount: 123,
+      date: "2016-01-01",
+    },
+    {
+      name: "tirlik",
+      avatar: "/images/avatar.png",
+      amount: 123,
+      date: "2016-01-01",
+    },
+    {
+      name: "tirlik",
+      avatar: "/images/avatar.png",
+      amount: 123,
+      date: "2016-01-01",
+    },
+    {
+      name: "tirlik",
+      avatar: "/images/avatar.png",
+      amount: 123,
+      date: "2016-01-01",
+    },
+  ];
+
+  return <ProductTabs bids={bids} text="good" />;
 }

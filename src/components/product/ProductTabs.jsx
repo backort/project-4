@@ -48,11 +48,9 @@ export default function ProductTabs({ text, bids }) {
                 </TableCell>
                 <TableCell align="right">{bid.amount}</TableCell>
                 <TableCell align="right">
-                  {parseISO(
-                    formatDistance(subDays(bid.date, 3), new Date(), {
-                      addSuffix: true,
-                    })
-                  )}
+                  {formatDistance(subDays(parseISO(bid.date), 3), new Date(), {
+                    addSuffix: true,
+                  })}
                 </TableCell>
               </TableRow>
             ))}

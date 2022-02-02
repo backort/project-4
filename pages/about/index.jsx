@@ -18,6 +18,7 @@ import ProductInfo from "../../src/components/product/ProductInfo";
 import ProductTabs from "../../src/components/product/ProductTabs";
 import ProductActions from "../../src/components/product/ProductActions";
 import ProductContainer from "../../src/components/product/ProductContainer";
+import ProfileCollectionFilters from "../../src/components/profile/ProfileCollectionFilters";
 
 export default function About() {
   let info = {
@@ -70,5 +71,23 @@ export default function About() {
     },
   ];
 
-  return <ProductContainer bids={bids} />;
+  let filters = {
+    sort: [
+      { label: "Name (Ascending)", value: 1 },
+      { label: "Name (Descending)", value: 2 },
+    ],
+    price: [
+      { label: "0.3 - 0.5 ETH", value: 3 },
+      {
+        label: "0.5 - 2 ETH",
+        value: 4,
+      },
+      {
+        label: "2- 3 ETH",
+        value: 5,
+      },
+    ],
+  };
+
+  return <ProfileCollectionFilters filters={filters} />;
 }

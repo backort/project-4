@@ -46,7 +46,7 @@ export default function ProfileCollectionFilters({ filters }) {
           </Select>
         </FormControl>
         <FormControl fullWidth>
-          <Input
+          <TextField
             variant="standart"
             startAdornment={
               <InputAdornment position="start">

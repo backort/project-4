@@ -17,35 +17,33 @@ export default function ProductContainer({
   source,
 }) {
   return (
-    <div className={classNames(styles["product-container"])}>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <ProductImage url={source} />
-        </Grid>
-        <Grid item xs={5}>
-          <ProductInfo
-            title={name}
-            creator={owner}
-            price={price}
-            currency={currency}
-            likes={likes}
-            timeEnd={auction_end}
-            isLive={details.isLive}
-            onTimeEnd={auction_end}
-          />
-          <ProductTabs />
-          <ProductActions
-            bids={bids}
-            text={details}
-            isLive={details.isLive}
-            currency={currency}
-            buyAmount={bids.buyAmount}
-            bidAmount={bids.bidAmount}
-            onBid={bids.onBid}
-            onBuy={bids.onBuy}
-          />
-        </Grid>
+    <Grid container className={classNames(styles["product-container"])}>
+      <Grid item xs={6}>
+        <ProductImage url={source} />
       </Grid>
-    </div>
+      <Grid item xs={5}>
+        <ProductInfo
+          title={name}
+          creator={owner}
+          price={price}
+          currency={currency}
+          likes={likes}
+          timeEnd={auction_end}
+          isLive={details.isLive}
+          onTimeEnd={auction_end}
+        />
+        <ProductTabs />
+        <ProductActions
+          bids={bids}
+          text={details}
+          isLive={details.isLive}
+          currency={currency}
+          buyAmount={bids.buyAmount}
+          bidAmount={bids.bidAmount}
+          onBid={bids.onBid}
+          onBuy={bids.onBuy}
+        />
+      </Grid>
+    </Grid>
   );
 }

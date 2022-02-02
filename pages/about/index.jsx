@@ -17,6 +17,7 @@ import ProductInfoTimer from "../../src/components/product/ProductInfoTimer";
 import ProductInfo from "../../src/components/product/ProductInfo";
 import ProductTabs from "../../src/components/product/ProductTabs";
 import ProductActions from "../../src/components/product/ProductActions";
+import ProductContainer from "../../src/components/product/ProductContainer";
 
 export default function About() {
   let info = {
@@ -69,5 +70,5 @@ export default function About() {
     },
   ];
 
-  return <ProductActions isLive={true} />;
+  return <ProductContainer />;
 }

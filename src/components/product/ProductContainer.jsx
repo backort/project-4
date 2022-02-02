@@ -4,7 +4,7 @@ import ProductImage from "./ProductImage";
 import ProductInfo from "./ProductInfo";
 import ProductTabs from "./ProductTabs";
 import ProductActions from "./ProductActions";
-import { Grid } from "@mui/material";
+import Grid from "@mui/material/Grid";
 
 export default function ProductContainer({
   name,
@@ -31,19 +31,17 @@ export default function ProductContainer({
             currency={currency}
             likes={likes}
             timeEnd={auction_end}
-            isLive={details.isLive}
+            isLive={auction_end}
             onTimeEnd={auction_end}
           />
-          <ProductTabs />
+          <ProductTabs bids={bids} text={details} />
           <ProductActions
-            bids={bids}
-            text={details}
-            isLive={details.isLive}
+            isLive={auction_end}
             currency={currency}
-            buyAmount={bids.buyAmount}
-            bidAmount={bids.bidAmount}
-            onBid={bids.onBid}
-            onBuy={bids.onBuy}
+            buyAmount={bids}
+            bidAmount={bids}
+            onBid={bids}
+            onBuy={bids}
           />
         </Grid>
       </Grid>

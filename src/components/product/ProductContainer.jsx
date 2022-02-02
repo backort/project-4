@@ -20,12 +20,30 @@ export default function ProductContainer({
     <div className={classNames(styles["product-container"])}>
       <Grid container spacing={2}>
         <Grid item xs={6}>
-          <ProductImage />
+          <ProductImage url={source} />
         </Grid>
         <Grid item xs={5}>
-          <ProductInfo />
+          <ProductInfo
+            title={name}
+            creator={owner}
+            price={price}
+            currency={currency}
+            likes={likes}
+            timeEnd={auction_end}
+            isLive={details.isLive}
+            onTimeEnd={auction_end}
+          />
           <ProductTabs />
-          <ProductActions />
+          <ProductActions
+            bids={bids}
+            text={details}
+            isLive={details.isLive}
+            currency={currency}
+            buyAmount={bids.buyAmount}
+            bidAmount={bids.bidAmount}
+            onBid={bids.onBid}
+            onBuy={bids.onBuy}
+          />
         </Grid>
       </Grid>
     </div>

@@ -18,43 +18,49 @@ export default function ProductTabs({ text, bids }) {
     setValue(newValue);
   };
   return (
-    <TabContext value={value} className={classNames(styles["product-tabs"])}>
-      <TabList onChange={handleChange}>
-        <Tab
-          label="Details"
-          value="1"
-          className={classNames(styles["tab-details"])}
-        />
-        <Tab
-          label="Bids"
-          value="2"
-          className={classNames(styles["tab-bids"])}
-        />
-      </TabList>
-      <TabPanel value="1">{text}</TabPanel>
-      <TabPanel value="2">
-        <Table>
-          <TableBody>
-            {bids.map((bid, i) => (
-              <TableRow
-                key={i}
-                className={classNames(`table-row-${i}`)}
-                style={{
-                  backgroundColor: i % 2 === 1 && "#4e24f2",
-                }}
-              >
-                <TableCell component="th" scope="row">
-                  <User name={bid.name} avatar={bid.avatar} />
-                </TableCell>
-                <TableCell align="right">{bid.amount}</TableCell>
-                <TableCell align="right">
-                  {formatDistance(parseISO(bid.date), new Date())}
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TabPanel>
-    </TabContext>
+    <div className={classNames(styles["product-tabs"])}>
+      <TabContext value={value}>
+        <TabList onChange={handleChange}>
+          <Tab
+            label="Details"
+            value="1"
+            className={classNames(styles["tab-details"])}
+          />
+          <Tab
+            label="Bids"
+            value="2"
+            className={classNames(styles["tab-bids"])}
+          />
+        </TabList>
+        <TabPanel value="1">{text}</TabPanel>
+        <TabPanel value="2">
+          <Table>
+            <TableBody>
+              {bids.map((bid, i) => (
+                <TableRow
+                  key={i}
+                  className={classNames(`table-row-${i}`)}
+                  style={{
+                    backgroundColor: i % 2 === 1 && "#4e24f2",
+                  }}
+                >
+                  <TableCell component="th" scope="row">
+                    <User
+                      name={bid.user.name}
+                      avatar={bid.user.avatar}
+                      verified={bid.user.verified}
+                    />
+                  </TableCell>
+                  <TableCell align="right">{bid.amount}</TableCell>
+                  <TableCell align="right">
+                    {formatDistance(parseISO(bid.date), new Date())}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TabPanel>
+      </TabContext>
+    </div>
   );
 }

@@ -31,26 +31,38 @@ export default function About() {
 
   let bids = [
     {
-      name: "tirlik",
-      avatar: "/images/avatar.png",
+      user: {
+        name: "tirlik",
+        avatar: "/images/avatar.png",
+        verified: true,
+      },
       amount: 123,
       date: "2016-01-01",
     },
     {
-      name: "tirlik",
-      avatar: "/images/avatar.png",
+      user: {
+        name: "tirlik",
+        avatar: "/images/avatar.png",
+        verified: true,
+      },
       amount: 123,
       date: "2016-01-01",
     },
     {
-      name: "tirlik",
-      avatar: "/images/avatar.png",
+      user: {
+        name: "tirlik",
+        avatar: "/images/avatar.png",
+        verified: true,
+      },
       amount: 123,
       date: "2016-01-01",
     },
     {
-      name: "tirlik",
-      avatar: "/images/avatar.png",
+      user: {
+        name: "tirlik",
+        avatar: "/images/avatar.png",
+        verified: true,
+      },
       amount: 123,
       date: "2016-01-01",
     },

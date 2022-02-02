@@ -70,5 +70,5 @@ export default function About() {
     },
   ];
 
-  return <ProductContainer />;
+  return <ProductContainer bids={bids} />;
 }

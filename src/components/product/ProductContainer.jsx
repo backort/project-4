@@ -21,7 +21,7 @@ export default function ProductContainer({
     <div className={classNames(styles["product-container"])}>
       <Grid container>
         <Grid item xs={6}>
-          <ProductImage url={source} />
+          <ProductImage url={source?.url} />
         </Grid>
         <Grid item xs={5}>
           <ProductInfo

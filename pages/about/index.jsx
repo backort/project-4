@@ -16,6 +16,7 @@ import ProductInfoCreator from "../../src/components/product/ProductInfoCreator"
 import ProductInfoTimer from "../../src/components/product/ProductInfoTimer";
 import ProductInfo from "../../src/components/product/ProductInfo";
 import ProductTabs from "../../src/components/product/ProductTabs";
+import ProductActions from "../../src/components/product/ProductActions";
 
 export default function About() {
   let info = {
@@ -68,5 +69,5 @@ export default function About() {
     },
   ];
 
-  return <ProductTabs bids={bids} text="good" />;
+  return <ProductActions isLive={true} />;
 }

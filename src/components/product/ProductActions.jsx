@@ -12,7 +12,7 @@ export default function ProductActions({
 }) {
   return (
     <div className={classNames(styles["product-actions"])}>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={7}>
           <Button
             className={classNames(styles.button)}

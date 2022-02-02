@@ -14,7 +14,7 @@ export default function index() {
       if (nft.id == pageID) setNft(nft);
     });
   }, [pageID]);
-  console.log(nft.owner?.username);
+  
   return (
     <div>
       <Header />

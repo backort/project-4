@@ -8,7 +8,6 @@ import {
   Stack,
   TextField,
   InputAdornment,
-  Input,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
@@ -46,14 +45,16 @@ export default function ProfileCollectionFilters({ filters }) {
           </Select>
         </FormControl>
         <FormControl fullWidth>
-          <TextField id="standard-basic" label="Search" variant="standard" />
-          <Input
-            variant="standart"
-            startAdornment={
-              <InputAdornment position="start">
-                <SearchIcon style={{ color: "white" }} />
-              </InputAdornment>
-            }
+          <TextField
+            label="Search"
+            variant="standard"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon style={{ color: "white" }} />
+                </InputAdornment>
+              ),
+            }}
           />
         </FormControl>
       </Stack>

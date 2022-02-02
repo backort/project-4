@@ -9,7 +9,6 @@ import {
   TextField,
   InputAdornment,
   Input,
-  Search,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
@@ -25,36 +24,38 @@ export default function ProfileCollectionFilters({ filters }) {
   };
   return (
     <div className={classNames(styles["profile-collection-filters"])}>
-      <FormControl fullWidth>
-        <InputLabel>Sort by</InputLabel>
-        <Select label="Sort by" value={sort} onChange={handleSort}>
-          {filters.sort.map((s) => (
-            <MenuItem key={s.value} value={s.value}>
-              {s.label}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-      <FormControl fullWidth>
-        <InputLabel>Price range</InputLabel>
-        <Select label="Price range" value={price} onChange={handlePrice}>
-          {filters.price.map((p) => (
-            <MenuItem key={p.value} value={p.value}>
-              {p.label}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-      <FormControl fullWidth>
-        <Input
-          variant="standart"
-          startAdornment={
-            <InputAdornment position="start">
-              <SearchIcon style={{ color: "white" }} />
-            </InputAdornment>
-          }
-        />
-      </FormControl>
+      <Stack direction="row" spacing={2}>
+        <FormControl fullWidth>
+          <InputLabel>Sort by</InputLabel>
+          <Select label="Sort by" value={sort} onChange={handleSort}>
+            {filters.sort.map((s) => (
+              <MenuItem key={s.value} value={s.value}>
+                {s.label}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+        <FormControl fullWidth>
+          <InputLabel>Price range</InputLabel>
+          <Select label="Price range" value={price} onChange={handlePrice}>
+            {filters.price.map((p) => (
+              <MenuItem key={p.value} value={p.value}>
+                {p.label}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+        <FormControl fullWidth>
+          <Input
+            variant="standart"
+            startAdornment={
+              <InputAdornment position="start">
+                <SearchIcon style={{ color: "white" }} />
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+      </Stack>
     </div>
   );
 }

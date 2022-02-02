@@ -16,11 +16,11 @@ export default function index() {
   }, [pageID]);
   
   return (
-    <div>
+    <>
       <Header />
       <ProductContainer
         name={nft.name}
-        owner={nft.owner?.username}
+        owner={nft.owner}
         price={nft.price}
         currency={nft.currency}
         likes={nft.likes}
@@ -30,6 +30,6 @@ export default function index() {
         source={nft.source}
       />
       <Footer />
-    </div>
+    </>
   );
 }

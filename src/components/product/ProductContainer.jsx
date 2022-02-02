@@ -34,7 +34,7 @@ export default function ProductContainer({
             isLive={auction_end}
             onTimeEnd={auction_end}
           />
-         {/*  <ProductTabs bids={bids} text={details} /> */}
+          <ProductTabs bids={bids} text={details} />
           <ProductActions
             isLive={auction_end}
             currency={currency}

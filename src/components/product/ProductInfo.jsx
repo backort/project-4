@@ -19,22 +19,27 @@ export default function ProductInfo({
   timeEnd,
   isLive,
 }) {
+  console.log(creator);
   return (
     <div className={classNames(styles["product-info"])}>
-      <ProductInfoTitle />
+      <ProductInfoTitle text={title} />
       <Stack direction="row" spacing={2} className={classNames(styles.stats)}>
-        <ProductInfoPrice />
-        <ProductInfoLikes />
+        <ProductInfoPrice amount={price} currency={currency} />
+        <ProductInfoLikes amount={likes} />
       </Stack>
       <Grid container spacing={2}>
         <Grid item xs={7}>
-          <ProductInfoCreator />
+          <ProductInfoCreator
+            name={creator?.username}
+            avatar={creator?.avatar.url}
+            verified={creator?.confirmed}
+          />
         </Grid>
         <Grid item xs={5}>
-          <ProductInfoTimer />
+          <ProductInfoTimer timeEnd={timeEnd} onTimeEnd={onTimeEnd} />
         </Grid>
       </Grid>
-      {isLive && <ProductInfoStatus />}
+      {isLive && <ProductInfoStatus status={isLive} />}
     </div>
   );
 }

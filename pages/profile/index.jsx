@@ -10,7 +10,6 @@ export default function profile() {
   useEffect(() => {
     setProfile(profileData);
   }, []);
-  console.log(profile);
   return (
     <div>
       <Header />

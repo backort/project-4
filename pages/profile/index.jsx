@@ -11,7 +11,7 @@ export default function profile() {
     setProfile(profileData);
   }, []);
   return (
-    <>
+    <div>
       <Header />
       <ProfileHero image={profile.avatar?.backgroundUrl} />
       <ProfileUser
@@ -26,6 +26,6 @@ export default function profile() {
         items={profile.nfts}
       />
       <Footer />
-    </>
+    </div>
   );
 }

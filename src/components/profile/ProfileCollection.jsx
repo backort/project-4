@@ -17,9 +17,10 @@ export default function ProfileCollection({ user, filters, items }) {
           </Grid>
         </Grid>
         <Grid container>
-          {items.map((card, i) => (
-            <Grid key={i} item xs={3}>
+          <Grid item xs={3}>
+            {items.map((card, i) => (
               <CardComponent
+                key={i}
                 name={card.name}
                 likes={card.likes}
                 mediaUrl={card.url}
@@ -28,8 +29,8 @@ export default function ProfileCollection({ user, filters, items }) {
                 currency={card.currency}
                 timeLeft={card.timeLeft}
               />
-            </Grid>
-          ))}
+            ))}
+          </Grid>
         </Grid>
       </Container>
     </div>

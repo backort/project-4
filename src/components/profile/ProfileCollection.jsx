@@ -4,7 +4,7 @@ import { Container, Grid, Typography } from "@mui/material";
 import ProfileCollectionFilters from "./ProfileCollectionFilters";
 import CardComponent from "../card/Card";
 
-export default function ProfileCollection({ user, filter, items }) {
+export default function ProfileCollection({ user, filters, items }) {
   return (
     <div className={classNames(styles["profile-collection"])}>
       <Container>
@@ -13,7 +13,7 @@ export default function ProfileCollection({ user, filter, items }) {
             <Typography variant="h3">Collections</Typography>
           </Grid>
           <Grid item xs={9}>
-            <ProfileCollectionFilters filters={filter} />
+            <ProfileCollectionFilters filters={filters} />
           </Grid>
         </Grid>
         <Grid container>

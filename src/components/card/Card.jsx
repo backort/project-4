@@ -6,7 +6,7 @@ import Countdown from "react-countdown";
 import LiveIcon from "@mui/icons-material/FiberManualRecord";
 
 import {
-  Card as MuiCard,
+  Card,
   CardContent,
   CardHeader,
   CardMedia,
@@ -14,7 +14,7 @@ import {
   Typography,
 } from "@mui/material";
 
-export default function Card({
+export default function CardComponent({
   name,
   likes = 0,
   mediaUrl,
@@ -24,7 +24,7 @@ export default function Card({
   timeLeft,
 }) {
   return (
-    <MuiCard
+    <Card
       sx={{ maxWidth: 345, minHeight: 420 }}
       className={timeLeft && classNames(styles.backgroundTimeLeft)}
       style={{ padding: "0 10px" }}
@@ -64,6 +64,6 @@ export default function Card({
           className={classNames(styles.likes)}
         />
       </CardContent>
-    </MuiCard>
+    </Card>
   );
 }

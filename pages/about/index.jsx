@@ -19,6 +19,7 @@ import ProductTabs from "../../src/components/product/ProductTabs";
 import ProductActions from "../../src/components/product/ProductActions";
 import ProductContainer from "../../src/components/product/ProductContainer";
 import ProfileCollectionFilters from "../../src/components/profile/ProfileCollectionFilters";
+import ProfileCollection from "../../src/components/profile/ProfileCollection";
 
 export default function About() {
   let info = {
@@ -89,5 +90,7 @@ export default function About() {
     ],
   };
 
-  return <ProfileCollectionFilters filters={filters} />;
+  let items = [{}, {}]
+
+  return <ProfileCollection filters={filters} items={items} />;
 }

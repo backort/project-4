@@ -90,7 +90,10 @@ export default function About() {
     ],
   };
 
-  let items = [{}, {}]
+  let items = [{}, {}];
+  let user = [
+    { name: "terlik", avatar: "./images/avatar.png", verified: false },
+  ];
 
-  return <ProfileCollection filters={filters} items={items} />;
+  return <ProfileCollection filters={filters} items={items} user={user} />;
 }

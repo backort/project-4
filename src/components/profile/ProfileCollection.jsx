@@ -17,8 +17,8 @@ export default function ProfileCollection({ user, filters, items }) {
           </Grid>
         </Grid>
         <Grid container>
-          {items.map((i, card) => (
-            <Grid key={i} item xs={3}>
+          {items.map((card, index) => (
+            <Grid key={index} item xs={3}>
               <Card
                 name={card.name}
                 likes={card.likes}

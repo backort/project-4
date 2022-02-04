@@ -21,6 +21,7 @@ import ProductContainer from "../../src/components/product/ProductContainer";
 import ProfileCollectionFilters from "../../src/components/profile/ProfileCollectionFilters";
 import ProfileCollection from "../../src/components/profile/ProfileCollection";
 import ActivityFilters from "../../src/components/activity/ActivityFilters";
+import ActivityItem from "../../src/components/activity/ActivityItem";
 
 export default function About() {
   let info = {
@@ -92,5 +93,30 @@ export default function About() {
     { name: "terlik", avatar: "./images/avatar.png", verified: false },
   ];
 
-  return <ActivityFilters filters={filters} />;
+  let activityItem = {
+    created_at: "21.02.2020",
+    user: {
+      avatarUrl: "images/avatgar.png",
+      verified: true,
+      name: "terlik",
+    },
+    nft: {
+      name: "ball",
+      user: {
+        name: "terlik2",
+        avatarUrl: "images/avatgar.png",
+        verified: true,
+      },
+    },
+    type: "buy",
+  };
+
+  return (
+    <ActivityItem
+      user={activityItem.user}
+      created_at={activityItem.created_at}
+      nft={activityItem.nft}
+      type={activityItem.type}
+    />
+  );
 }

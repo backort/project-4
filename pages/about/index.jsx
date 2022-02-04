@@ -96,7 +96,7 @@ export default function About() {
   let activityItem = {
     created_at: "21.02.2020",
     user: {
-      avatarUrl: "images/avatgar.png",
+      avatarUrl: "images/avatar.png",
       verified: true,
       name: "terlik",
     },
@@ -104,7 +104,7 @@ export default function About() {
       name: "ball",
       user: {
         name: "terlik2",
-        avatarUrl: "images/avatgar.png",
+        avatarUrl: "images/avatar.png",
         verified: true,
       },
     },

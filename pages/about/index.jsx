@@ -20,6 +20,7 @@ import ProductActions from "../../src/components/product/ProductActions";
 import ProductContainer from "../../src/components/product/ProductContainer";
 import ProfileCollectionFilters from "../../src/components/profile/ProfileCollectionFilters";
 import ProfileCollection from "../../src/components/profile/ProfileCollection";
+import ActivityFilters from "../../src/components/activity/ActivityFilters";
 
 export default function About() {
   let info = {
@@ -77,15 +78,11 @@ export default function About() {
       { label: "Name (Ascending)", value: 1 },
       { label: "Name (Descending)", value: 2 },
     ],
-    price: [
-      { label: "0.3 - 0.5 ETH", value: 3 },
+    type: [
+      { label: "Liked", value: 3 },
       {
-        label: "0.5 - 2 ETH",
+        label: "Bought",
         value: 4,
-      },
-      {
-        label: "2- 3 ETH",
-        value: 5,
       },
     ],
   };
@@ -95,5 +92,5 @@ export default function About() {
     { name: "terlik", avatar: "./images/avatar.png", verified: false },
   ];
 
-  return <ProfileCollection filters={filters} items={items} user={user} />;
+  return <ActivityFilters filters={filters} />;
 }

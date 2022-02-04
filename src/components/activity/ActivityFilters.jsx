@@ -49,9 +49,9 @@ export default function ActivityFilters({ filters }) {
               variant="outlined"
               color="primary"
             >
-              {filters.price.map((p) => (
-                <MenuItem key={p.value} value={p.value}>
-                  {p.label}
+              {filters.type.map((t) => (
+                <MenuItem key={t.value} value={t.value}>
+                  {t.label}
                 </MenuItem>
               ))}
             </Select>

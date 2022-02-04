@@ -1,14 +1,12 @@
 import styles from "./ActivityFilters.module.scss";
 import classNames from "classnames";
-import {
-  FormControl,
-  Select,
-  InputLabel,
-  MenuItem,
-  Stack,
-  TextField,
-  InputAdornment,
-} from "@mui/material";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 
@@ -28,7 +26,13 @@ export default function ActivityFilters({ filters }) {
         <Stack direction="row" spacing={2}>
           <FormControl fullWidth>
             <InputLabel>Sort by</InputLabel>
-            <Select label="Sort by" value={sort} onChange={handleSort}>
+            <Select
+              label="Sort by"
+              value={sort}
+              onChange={handleSort}
+              variant="outlined"
+              color="primary"
+            >
               {filters.sort.map((s) => (
                 <MenuItem key={s.value} value={s.value}>
                   {s.label}
@@ -38,7 +42,13 @@ export default function ActivityFilters({ filters }) {
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>Price range</InputLabel>
-            <Select label="Price range" value={price} onChange={handlePrice}>
+            <Select
+              label="Price range"
+              value={price}
+              onChange={handlePrice}
+              variant="outlined"
+              color="primary"
+            >
               {filters.price.map((p) => (
                 <MenuItem key={p.value} value={p.value}>
                   {p.label}

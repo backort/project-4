@@ -12,7 +12,7 @@ export default function ActivityListItem({
   type = "like",
 }) {
   return (
-    <div className={classNames(styles['activity-list-item'])}>
+    <div>
       <Avatar url={user.avatarUrl} verified={user.verified} />
       <Typography variant="paragraph">
         {user.name} {type === "like" ? "liked" : type === "buy" && "bought"}{" "}
@@ -25,7 +25,7 @@ export default function ActivityListItem({
         </Link>
       </Typography>
       <Typography variant="paragraph">
-        {formatDistance(parseISO(created_at), Date.now(), { addSuffix: true })}
+        {formatDistance(parseISO(created_at), new Date())}
       </Typography>
     </div>
   );

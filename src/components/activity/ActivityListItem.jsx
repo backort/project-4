@@ -1,11 +1,11 @@
-import styles from "./ActivityItem.module.scss";
+import styles from "./ActivityListItem.module.scss";
 import classNames from "classnames";
 import { formatDistance, parseISO, subDays } from "date-fns";
 import Avatar from "../avatar/Avatar";
 import Link from "../link/Link";
 import Typography from "@mui/material/Typography";
 
-export default function ActivityItem({ user, created_at, nft, type = "like" }) {
+export default function ActivityListItem({ user, created_at, nft, type = "like" }) {
   return (
     <div>
       <Avatar url={user.avatarUrl} verified={user.verified} />

@@ -21,7 +21,7 @@ import ProductContainer from "../../src/components/product/ProductContainer";
 import ProfileCollectionFilters from "../../src/components/profile/ProfileCollectionFilters";
 import ProfileCollection from "../../src/components/profile/ProfileCollection";
 import ActivityFilters from "../../src/components/activity/ActivityFilters";
-import ActivityItem from "../../src/components/activity/ActivityItem";
+import ActivityItem from "../../src/components/activity/ActivityListItem";
 
 export default function About() {
   let info = {

@@ -12,21 +12,24 @@ export default function ActivityListItem({
   type = "like",
 }) {
   return (
-    <div>
+    <div className={classNames(styles["activity-list-item"])}>
       <Avatar url={user.avatarUrl} verified={user.verified} />
-      <Typography variant="paragraph">
-        {user.name} {type === "like" ? "liked" : type === "buy" && "bought"}{" "}
-        <Link href="/" color="secondary">
-          {nft.name}
-        </Link>{" "}
-        by{" "}
-        <Link href="/" color="secondary">
-          {nft.user.name}
-        </Link>
-      </Typography>
-      <Typography variant="paragraph">
-        {formatDistance(parseISO(created_at), new Date())}
-      </Typography>
+      <div>
+        <Typography variant="paragraph">
+          {user.name} {type === "like" ? "liked" : type === "buy" && "bought"}{" "}
+          <Link href="/" color="secondary">
+            {nft.name}
+          </Link>{" "}
+          by{" "}
+          <Link href="/" color="secondary">
+            {nft.user.name}
+          </Link>
+        </Typography>
+        <br />
+        <Typography variant="paragraph" className={classNames(styles.secondaryText)}>
+          {formatDistance(parseISO(created_at), new Date())}
+        </Typography>
+      </div>
     </div>
   );
 }

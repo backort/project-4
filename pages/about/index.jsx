@@ -22,6 +22,7 @@ import ProfileCollectionFilters from "../../src/components/profile/ProfileCollec
 import ProfileCollection from "../../src/components/profile/ProfileCollection";
 import ActivityFilters from "../../src/components/activity/ActivityFilters";
 import ActivityItem from "../../src/components/activity/ActivityListItem";
+import ActivityList from "../../src/components/activity/ActivityList";
 
 export default function About() {
   let info = {
@@ -93,30 +94,42 @@ export default function About() {
     { name: "terlik", avatar: "./images/avatar.png", verified: false },
   ];
 
-  let activityItem = {
-    created_at: "21.02.2020",
-    user: {
-      avatarUrl: "images/avatar.png",
-      verified: true,
-      name: "terlik",
-    },
-    nft: {
-      name: "ball",
+  let activityItem = [
+    {
+      created_at: "2021-10-22T08:29:18.821Z",
       user: {
-        name: "terlik2",
         avatarUrl: "images/avatar.png",
         verified: true,
+        name: "terlik",
       },
+      nft: {
+        name: "ball",
+        user: {
+          name: "terlik2",
+          avatarUrl: "images/avatar.png",
+          verified: true,
+        },
+      },
+      type: "buy",
     },
-    type: "buy",
-  };
+    {
+      created_at: "2021-10-22T08:29:18.821Z",
+      user: {
+        avatarUrl: "images/avatar.png",
+        verified: true,
+        name: "terlik",
+      },
+      nft: {
+        name: "ball",
+        user: {
+          name: "terlik2",
+          avatarUrl: "images/avatar.png",
+          verified: true,
+        },
+      },
+      type: "buy",
+    },
+  ];
 
-  return (
-    <ActivityItem
-      user={activityItem.user}
-      created_at={activityItem.created_at}
-      nft={activityItem.nft}
-      type={activityItem.type}
-    />
-  );
+  return <ActivityList items={activityItem} />;
 }

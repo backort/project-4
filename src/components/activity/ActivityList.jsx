@@ -6,9 +6,8 @@ import ActivityListItem from "./ActivityListItem";
 export default function ActivityList({ items }) {
   return (
     <div className={classNames(styles["activity-list"])}>
-      <Stack spacing={2}>
-        {items &&
-          items.map((item, index) => (
+      <Stack direction="column" spacing={2}>
+        {items.map((item, index) => (
             <ActivityListItem
               key={index}
               user={item.user}
